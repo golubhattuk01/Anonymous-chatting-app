@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import io from "socket.io-client";
 import Chat from "./Chat";
-const socket = io.connect("https://anonymous-chatting-app.vercel.app/");
+const socket = io.connect(import.meta.env.VITE_APP_SERVER);
 
 const Home = () => {
   const [username, setUsername] = useState("");
