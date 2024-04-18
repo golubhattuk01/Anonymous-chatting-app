@@ -1,5 +1,5 @@
 import "dotenv/config";
-import { app, server } from "./socket/socket.js";
+import { app, server } from "./src/socket/socket.js";
 
 app.get("/", (req, res) => {
   console.log("server of socket is working properly");
