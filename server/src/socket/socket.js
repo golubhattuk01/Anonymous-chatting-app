@@ -15,7 +15,6 @@ const io = new Server(server, {
 
 io.on("connection", (socket) => {
   console.log(socket.id);
-  io.set("transports", ["polling"]);
 
   socket.on("join_room", (data) => {
     socket.join(data);

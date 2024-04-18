@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import io from "socket.io-client";
 import Chat from "./Chat";
-const socket = io.connect(import.meta.env.VITE_APP_SERVER, {
-  transports: ["polling"],
-  upgrade: false,
-  forceNew: true,
-});
+const socket = io.connect(
+  import.meta.env.VITE_APP_SERVER || "http://localhost:3000"
+);
 
 const Home = () => {
   const [username, setUsername] = useState("");
