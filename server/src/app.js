@@ -9,12 +9,12 @@ app.use(
     credentials: true,
   })
 );
-
-// app.use(cors());
 app.use(cookieParser());
 app.use(express.json({ limit: "16mb" }));
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true, limit: "16mb" }));
+
 app.get("/", (req, res) => {
+  console.log("server of socket is working properly");
   res.send("server of socket is working properly");
 });
