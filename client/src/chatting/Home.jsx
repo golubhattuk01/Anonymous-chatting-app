@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import io from "socket.io-client";
 import Chat from "./Chat";
 const socket = io.connect(import.meta.env.VITE_APP_SERVER, {
-  transports: ["websocket"],
+  transports: ["polling"],
+  upgrade: false,
+  forceNew: true,
 });
 
 const Home = () => {
